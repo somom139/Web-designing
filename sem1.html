@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Semester 1 Subjects</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #E2E8F0;
+            background-color: #0F172A;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+        .main-content {
+            z-index: 10;
+            max-width: 1000px;
+            width: 90%;
+            padding: 2rem;
+            text-align: center;
+            background: rgba(15, 23, 42, 0.7);
+            border-radius: 1rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            margin: 2rem auto;
+        }
+        header {
+            padding: 1rem 0;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #CBD5E1;
+            margin-bottom: 0.5rem;
+        }
+
+        header .back-link {
+            color: #94A3B8;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        header .back-link:hover {
+            color: #E2E8F0;
+        }
+
+        /* Container for subject cards using Flexbox */
+        .subject-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        /* Styling for each subject card */
+        .subject-card {
+            background: rgba(30, 41, 59, 0.9);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            width: calc(33.333% - 1rem); /* 3 cards per row on large screens */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: left;
+            border-left: 4px solid #4C8BF5;
+        }
+
+        .subject-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Responsive design for subject cards */
+        @media (max-width: 1024px) {
+            .subject-card {
+                width: calc(50% - 1rem); /* 2 cards per row on medium screens */
+            }
+        }
+
+        @media (max-width: 640px) {
+            .subject-card {
+                width: 100%; /* 1 card per row on small screens */
+            }
+        }
+
+        .subject-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #CBD5E1;
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+
+        .subject-card p {
+            font-size: 0.9rem;
+            color: #94A3B8;
+            margin-bottom: 1.5rem;
+        }
+
+        .subject-card a {
+            display: inline-block;
+            background-color: #4C8BF5;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .subject-card a:hover {
+            background-color: #3a5aa6;
+        }
+
+        /* Footer styling */
+        footer {
+            padding: 1rem 0;
+            color: #64748B;
+            font-size: 0.8rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-content">
+    <header>
+        <h1>Semester 1 Subjects</h1>
+        <a href="index.html" class="back-link">&lt; Back to Home</a>
+    </header>
+
+    <div class="subject-grid">
+        <!-- Sample Subject Card 1 -->
+        <div class="subject-card">
+            <h3>18MAT11: Engineering Mathematics-I</h3>
+            <p>Fundamental concepts of calculus and differential equations.</p>
+            <a href="notes/sem1/maths1.pdf">Download Notes</a>
+        </div>
+        
+        <!-- Sample Subject Card 2 -->
+        <div class="subject-card">
+            <h3>18PHY12: Engineering Physics</h3>
+            <p>Basic principles of modern physics and quantum mechanics.</p>
+            <a href="notes/sem1/physics.pdf">Download Notes</a>
+        </div>
+
+        <!-- Sample Subject Card 3 -->
+        <div class="subject-card">
+            <h3>18EGDL15: Engineering Graphics</h3>
+            <p>Introduction to 2D and 3D drawing techniques.</p>
+            <a href="notes/sem1/graphics.pdf">Download Notes</a>
+        </div>
+
+        <!-- Add more subject cards here... -->
+        
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Sooraj R Nair. All rights reserved.</p>
+    </footer>
+</div>
+
+</body>
+</html>
